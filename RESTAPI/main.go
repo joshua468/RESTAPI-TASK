@@ -17,10 +17,10 @@ var tasks []Task
 func main() {
 	r := gin.Default()
 	r.GET("/tasks", getTasks)
-	r.GET("/tasks:id", getTask)
+	r.GET("/tasks/:id", getTask)
 	r.POST("/tasks", createTask)
-	r.PUT("/tasks:id", updateTask)
-	r.DELETE("/tasks:id", deleteTask)
+	r.PUT("/tasks/:id", updateTask)
+	r.DELETE("/tasks/:id", deleteTask)
 
 	r.Run(":8080")
 }
